@@ -86,9 +86,9 @@ button {
 
 .logo-img {
   display: block;
-  height: 72px;
+  height: 56px;
   width: auto;
-  max-width: min(420px, 72vw);
+  max-width: min(360px, 78vw);
   object-fit: contain;
   background: var(--white);
 }
@@ -217,6 +217,16 @@ button {
   background: var(--white);
   color: var(--gray-900);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.store-badge--soon {
+  cursor: default;
+  opacity: 0.88;
+}
+
+.store-badge--soon:hover {
+  transform: none;
+  opacity: 0.88;
 }
 
 /* Hero */
@@ -764,9 +774,9 @@ button {
 }
 
 .logo--footer .logo-img {
-  height: 64px;
-  max-width: min(360px, 85vw);
-  padding: 0.4rem 0.55rem;
+  height: 52px;
+  max-width: min(320px, 85vw);
+  padding: 0.45rem 0.6rem;
   background: var(--white);
   border-radius: 8px;
 }
@@ -799,9 +809,21 @@ button {
   opacity: 0.7;
 }
 
+.footer-contact address {
+  margin: 0 0 0.85rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
 .footer-contact a {
   color: var(--white);
   font-weight: 500;
+}
+
+.footer-contact-links {
+  opacity: 1 !important;
 }
 
 .footer-bottom {
@@ -821,6 +843,7 @@ button {
   .features-grid,
   .download-grid,
   .app-showcase-grid,
+  .product-card,
   .reach-grid {
     grid-template-columns: 1fr;
   }
@@ -867,7 +890,7 @@ button {
   }
 
   .logo-img {
-    height: 58px;
+    height: 44px;
   }
 
   .nav-toggle {
@@ -1217,6 +1240,163 @@ button {
   color: var(--blue-700);
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.browse-note {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--blue-800);
+  font-weight: 600;
+}
+
+.company-intro-copy {
+  max-width: 46rem;
+}
+
+.company-intro-copy p {
+  margin: 0 0 1rem;
+  color: var(--gray-700);
+  font-size: 1.05rem;
+}
+
+.company-intro-copy a {
+  color: var(--blue-700);
+  font-weight: 600;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.product-card h3 {
+  margin: 0 0 1rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--blue-900);
+  letter-spacing: -0.02em;
+}
+
+.product-download {
+  margin-top: 1.5rem;
+}
+
+.product-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+}
+
+.product-platforms span {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--blue-100);
+  color: var(--blue-800);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.company-identity {
+  background: var(--blue-50);
+}
+
+.company-identity-inner .section-head {
+  margin-bottom: 1.5rem;
+}
+
+.company-identity-links {
+  margin: 1.5rem 0 0;
+  font-weight: 600;
+}
+
+.company-identity-links a {
+  color: var(--blue-700);
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2rem;
+  margin: 0;
+}
+
+.fact-grid div {
+  padding: 1.1rem 1.2rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+}
+
+.fact-grid dt {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-700);
+}
+
+.fact-grid dd {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--gray-900);
+}
+
+.fact-grid a {
+  color: var(--blue-700);
+  font-weight: 600;
+}
+
+.fact-grid--compact {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+  color: var(--blue-900);
+}
+
+.contact-card p {
+  margin: 0 0 0.75rem;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.contact-card address {
+  font-style: normal;
+  line-height: 1.6;
+  color: var(--gray-900);
+}
+
+.contact-card a {
+  color: var(--blue-700);
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .fact-grid,
+  .fact-grid--compact,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 960px) {

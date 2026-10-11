@@ -1,9 +1,9 @@
 /**
  * Bikenest static site config
- * Update APP_LINKS when your apps are live on the stores.
+ * Set appStore to the live App Store URL when the iOS app is published.
  */
 const APP_LINKS = {
-  appStore: "#",
+  appStore: "",
   playStore: "https://play.google.com/store/apps/details?id=com.sveyo.app",
 };
 
@@ -12,14 +12,9 @@ document.querySelectorAll("[data-store]").forEach((el) => {
   if (APP_LINKS[store]) el.href = APP_LINKS[store];
 });
 
-["hero-app-store", "download-app-store"].forEach((id) => {
-  const el = document.getElementById(id);
-  if (el) el.href = APP_LINKS.appStore;
-});
-
 ["hero-play-store", "download-play-store"].forEach((id) => {
   const el = document.getElementById(id);
-  if (el) el.href = APP_LINKS.playStore;
+  if (el && APP_LINKS.playStore) el.href = APP_LINKS.playStore;
 });
 
 const yearEl = document.getElementById("year");
